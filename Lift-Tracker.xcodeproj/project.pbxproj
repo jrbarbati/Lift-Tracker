@@ -15,6 +15,11 @@
 		7C316A76217FE07D009B37D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C316A74217FE07D009B37D0 /* LaunchScreen.storyboard */; };
 		7C316A81217FE07E009B37D0 /* Lift_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C316A80217FE07E009B37D0 /* Lift_TrackerTests.swift */; };
 		7C316A8C217FE07E009B37D0 /* Lift_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C316A8B217FE07E009B37D0 /* Lift_TrackerUITests.swift */; };
+		7C316A9B217FE93F009B37D0 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C316A9A217FE93F009B37D0 /* MainTabBarViewController.swift */; };
+		7C316A9D217FE9B1009B37D0 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C316A9C217FE9B1009B37D0 /* WorkoutViewController.swift */; };
+		7C316AA3217FE9FB009B37D0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C316AA2217FE9FB009B37D0 /* HistoryViewController.swift */; };
+		7C316AA5217FEA03009B37D0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C316AA4217FEA03009B37D0 /* CalendarViewController.swift */; };
+		7C316AA7217FEA0A009B37D0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C316AA6217FEA0A009B37D0 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		7C316A87217FE07E009B37D0 /* Lift-TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lift-TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C316A8B217FE07E009B37D0 /* Lift_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lift_TrackerUITests.swift; sourceTree = "<group>"; };
 		7C316A8D217FE07E009B37D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C316A9A217FE93F009B37D0 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		7C316A9C217FE9B1009B37D0 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		7C316AA2217FE9FB009B37D0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		7C316AA4217FEA03009B37D0 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		7C316AA6217FEA0A009B37D0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		7C316A67217FE07C009B37D0 /* Lift-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				7C316A99217FE909009B37D0 /* Tabs */,
 				7C316A68217FE07C009B37D0 /* AppDelegate.swift */,
 				7C316A6A217FE07C009B37D0 /* ViewController.swift */,
 				7C316A6C217FE07C009B37D0 /* Main.storyboard */,
@@ -126,6 +137,50 @@
 				7C316A8D217FE07E009B37D0 /* Info.plist */,
 			);
 			path = "Lift-TrackerUITests";
+			sourceTree = "<group>";
+		};
+		7C316A99217FE909009B37D0 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				7C316A9A217FE93F009B37D0 /* MainTabBarViewController.swift */,
+				7C316A9E217FE9BF009B37D0 /* Workout */,
+				7C316A9F217FE9C9009B37D0 /* History */,
+				7C316AA1217FE9D5009B37D0 /* Calendar */,
+				7C316AA0217FE9D0009B37D0 /* Settings */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		7C316A9E217FE9BF009B37D0 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				7C316A9C217FE9B1009B37D0 /* WorkoutViewController.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		7C316A9F217FE9C9009B37D0 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				7C316AA2217FE9FB009B37D0 /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		7C316AA0217FE9D0009B37D0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7C316AA6217FEA0A009B37D0 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7C316AA1217FE9D5009B37D0 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				7C316AA4217FEA03009B37D0 /* CalendarViewController.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C316A71217FE07C009B37D0 /* Lift_Tracker.xcdatamodeld in Sources */,
+				7C316A9B217FE93F009B37D0 /* MainTabBarViewController.swift in Sources */,
+				7C316A9D217FE9B1009B37D0 /* WorkoutViewController.swift in Sources */,
+				7C316AA3217FE9FB009B37D0 /* HistoryViewController.swift in Sources */,
 				7C316A6B217FE07C009B37D0 /* ViewController.swift in Sources */,
+				7C316AA5217FEA03009B37D0 /* CalendarViewController.swift in Sources */,
 				7C316A69217FE07C009B37D0 /* AppDelegate.swift in Sources */,
+				7C316AA7217FEA0A009B37D0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

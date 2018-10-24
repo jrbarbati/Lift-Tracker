@@ -48,89 +48,165 @@
             </objects>
             <point key="canvasLocation" x="-459.4202898550725" y="20.758928571428569"/>
         </scene>
-        <!--History-->
-        <scene sceneID="Fjk-YL-8bw">
+        <!--Workout Table View Controller-->
+        <scene sceneID="PRi-kC-EBS">
             <objects>
-                <viewController storyboardIdentifier="HistoryStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4G6-zz-Ksc" userLabel="History" customClass="HistoryViewController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="x43-5N-Fjk">
+                <tableViewController storyboardIdentifier="WorkoutTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xaM-Uf-guM" customClass="WorkoutTableViewController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fMC-9G-Zue">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="L8q-Qv-QEe"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="History" id="EUt-mS-bk6" userLabel="History"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2BJ-vp-IAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WorkoutTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="100" id="Tro-0g-M2I" customClass="WorkoutTableViewCell" customModule="Lift_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tro-0g-M2I" id="hmX-gO-QjH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2g-As-f9K">
+                                            <rect key="frame" x="20" y="11" width="172" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is where the buttons will go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66X-BP-gC9">
+                                            <rect key="frame" x="20" y="68" width="246" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-Dq-e3l">
+                                            <rect key="frame" x="283" y="6" width="111" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="changeWeight:" destination="Tro-0g-M2I" eventType="touchUpInside" id="idE-RP-b0c"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="changeWeightButton" destination="OpG-Dq-e3l" id="JpD-05-qEm"/>
+                                    <outlet property="tempLabel" destination="66X-BP-gC9" id="EiR-8m-e0Y"/>
+                                    <outlet property="workoutNameLabel" destination="Q2g-As-f9K" id="KdX-LE-86U"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xaM-Uf-guM" id="4jI-qs-Wcx"/>
+                            <outlet property="delegate" destination="xaM-Uf-guM" id="DsO-RZ-E1c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="g7V-7g-6MW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPU-rv-yZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387" y="-344"/>
+            <point key="canvasLocation" x="2437.68115942029" y="-1045.3125"/>
         </scene>
-        <!--Workout-->
-        <scene sceneID="eYj-gD-oIy">
-            <objects>
-                <viewController storyboardIdentifier="WorkoutStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IaA-ci-Zgx" customClass="WorkoutViewController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CW8-cA-bZa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="KPA-GJ-Fg9"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Workout" id="xOP-g4-wWN"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xp1-8g-m1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1387" y="-1045"/>
-        </scene>
-        <!--Main Tab Bar Controller-->
+        <!--MainTabBarViewController-->
         <scene sceneID="mrk-Jz-ZXA">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cZm-7g-FIA" customClass="MainTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarStoryboard" title="MainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cZm-7g-FIA" customClass="MainTabBarViewController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8vz-kW-nNI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="IaA-ci-Zgx" kind="relationship" relationship="viewControllers" id="xdu-KP-hva"/>
-                        <segue destination="4G6-zz-Ksc" kind="relationship" relationship="viewControllers" id="z2b-vr-JOl"/>
-                        <segue destination="nqp-hA-2qX" kind="relationship" relationship="viewControllers" id="wDK-6N-hc3"/>
-                        <segue destination="0fP-ON-QNU" kind="relationship" relationship="viewControllers" id="8Jg-c1-mmZ"/>
+                        <segue destination="9xZ-es-6yO" kind="relationship" relationship="viewControllers" id="Ufo-Ea-ueD"/>
+                        <segue destination="fN4-aG-ICF" kind="relationship" relationship="viewControllers" id="7rf-fg-A78"/>
+                        <segue destination="4zy-uF-RoS" kind="relationship" relationship="viewControllers" id="T8n-qU-eSt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irc-V8-FtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="468" y="21"/>
         </scene>
-        <!--Calendar-->
-        <scene sceneID="de8-xp-ulc">
+        <!--History-->
+        <scene sceneID="Ljw-Lr-MXp">
             <objects>
-                <viewController storyboardIdentifier="CalendarStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nqp-hA-2qX" userLabel="Calendar" customClass="CalendarViewController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7dD-4a-5eM">
+                <viewController storyboardIdentifier="HistoryViewStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fN4-aG-ICF" customClass="HistoryViewController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kGK-xN-cvF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="iA1-Ik-6JO"/>
+                        <viewLayoutGuide key="safeArea" id="mfV-px-MtM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" id="60i-u5-V6C" userLabel="Calendar"/>
+                    <tabBarItem key="tabBarItem" title="History" id="M3n-gc-XCr"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hVw-lW-Wdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSu-GX-WgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387" y="336"/>
+            <point key="canvasLocation" x="1387" y="-373"/>
+        </scene>
+        <!--Workout Navigation Controller-->
+        <scene sceneID="mkL-He-PT9">
+            <objects>
+                <navigationController storyboardIdentifier="WorkoutNavigationView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9xZ-es-6yO" userLabel="Workout Navigation Controller" customClass="WorkoutNavigationController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workout" id="gB9-Db-L3U"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u8v-YG-R5a">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xaM-Uf-guM" kind="relationship" relationship="rootViewController" id="fJS-Er-PHu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFa-Tu-pTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="-1045"/>
+        </scene>
+        <!--Settings Table View Controller-->
+        <scene sceneID="ukW-aX-Q2w">
+            <objects>
+                <tableViewController storyboardIdentifier="SettingsTableViewStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QMu-1R-KxV" customClass="SettingsTableViewController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lzu-CI-glX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SettingsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="Qz1-fQ-Xfd" customClass="SettingsTableViewCell" customModule="Lift_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qz1-fQ-Xfd" id="X3E-QR-5Vl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QMu-1R-KxV" id="8rU-iK-pzX"/>
+                            <outlet property="delegate" destination="QMu-1R-KxV" id="uKV-UD-53O"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="eE0-Jf-8pK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kqy-1Y-6WP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="959"/>
         </scene>
         <!--Settings-->
-        <scene sceneID="w9x-Di-Yk0">
+        <scene sceneID="DGp-c2-Hsv">
             <objects>
-                <viewController storyboardIdentifier="SettingsStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0fP-ON-QNU" userLabel="Settings" customClass="SettingsViewController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iSY-Ry-BBp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="cNr-mr-Ap4"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="H8A-a1-mj9" userLabel="Settings"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tO9-3I-Z2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="SettingsNavigationStoryboard" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4zy-uF-RoS" customClass="SettingsNavigationController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" id="Ilp-b7-s7f"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UoS-3c-qrH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QMu-1R-KxV" kind="relationship" relationship="rootViewController" id="m1o-on-yNN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2U-Ax-Ekc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387" y="1027"/>
+            <point key="canvasLocation" x="1387" y="959"/>
         </scene>
     </scenes>
 </document>

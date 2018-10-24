@@ -1,5 +1,5 @@
 //
-//  CalendarViewController.swift
+//  SettingsViewController.swift
 //  Lift-Tracker
 //
 //  Created by Joseph Barbati on 10/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalendarViewController: UIViewController
+class SettingsNavigationController: UINavigationController
 {
     override func viewDidLoad()
     {
@@ -16,7 +16,7 @@ class CalendarViewController: UIViewController
 
         // Do any additional setup after loading the view.
     }
-    
+
     /*
     // MARK: - Navigation
 

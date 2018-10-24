@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  WorkoutViewController.swift
 //  Lift-Tracker
 //
 //  Created by Joseph Barbati on 10/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController
+class WorkoutNavigationController: UINavigationController
 {
     override func viewDidLoad()
     {
@@ -21,7 +21,8 @@ class SettingsViewController: UIViewController
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }

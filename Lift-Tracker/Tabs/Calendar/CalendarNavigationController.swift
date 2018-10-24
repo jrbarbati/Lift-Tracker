@@ -1,5 +1,5 @@
 //
-//  WorkoutViewController.swift
+//  CalendarViewController.swift
 //  Lift-Tracker
 //
 //  Created by Joseph Barbati on 10/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WorkoutViewController: UIViewController
+class CalendarNavigationController: UINavigationController
 {
     override func viewDidLoad()
     {
@@ -16,7 +16,7 @@ class WorkoutViewController: UIViewController
 
         // Do any additional setup after loading the view.
     }
-
+    
     /*
     // MARK: - Navigation
 

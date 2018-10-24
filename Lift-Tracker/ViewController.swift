@@ -21,5 +21,15 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // TODO: Bypass this view if stuff exists in DB
+        if stuffExistsInDB() {
+            performSegue(withIdentifier: "bypassInitial", sender: nil)
+        }
+    }
+    
+    private func stuffExistsInDB() -> Bool
+    {
+        return false
     }
 }

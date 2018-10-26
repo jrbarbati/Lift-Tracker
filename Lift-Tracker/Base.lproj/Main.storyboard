@@ -135,7 +135,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mfV-px-MtM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" id="M3n-gc-XCr"/>
+                    <tabBarItem key="tabBarItem" title="History" image="historyIcon" id="M3n-gc-XCr">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSu-GX-WgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,7 +147,9 @@
         <scene sceneID="mkL-He-PT9">
             <objects>
                 <navigationController storyboardIdentifier="WorkoutNavigationView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9xZ-es-6yO" userLabel="Workout Navigation Controller" customClass="WorkoutNavigationController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workout" id="gB9-Db-L3U"/>
+                    <tabBarItem key="tabBarItem" title="Workout" image="dumbbellIcon" id="gB9-Db-L3U">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u8v-YG-R5a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -193,7 +197,9 @@
         <scene sceneID="DGp-c2-Hsv">
             <objects>
                 <navigationController storyboardIdentifier="SettingsNavigationStoryboard" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4zy-uF-RoS" customClass="SettingsNavigationController" customModule="Lift_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="Ilp-b7-s7f"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsIcon" id="Ilp-b7-s7f">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UoS-3c-qrH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -209,4 +215,9 @@
             <point key="canvasLocation" x="1387" y="959"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dumbbellIcon" width="90" height="90"/>
+        <image name="historyIcon" width="90" height="90"/>
+        <image name="settingsIcon" width="90" height="90"/>
+    </resources>
 </document>

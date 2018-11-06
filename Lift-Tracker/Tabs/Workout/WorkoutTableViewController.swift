@@ -47,6 +47,10 @@ class WorkoutTableViewController: UITableViewController
     {
         return 100.0
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {

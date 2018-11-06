@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct WorkoutHistory {
+struct WorkoutHistory
+{
     var workout: Workout
     var weight: Int
     var date: Date

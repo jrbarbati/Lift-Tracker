@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Workout {
+struct Workout
+{
     var name: String
     var reps: Int
     var sets: Int
